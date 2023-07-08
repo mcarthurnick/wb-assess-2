@@ -12,3 +12,88 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+body {
+    margin: 0px;
+    font-family: 'Nunito'
+}
+
+.header {
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+}
+
+.nav-container {
+    width: 1000px;
+	max-width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+  }
+
+  .header .nav-container {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.heading {
+    color: rgb(42, 171, 226)
+}
+  
+.main-nav ul {
+	margin: 20px;
+	text-align: center;
+}
+.main-nav li {
+    color: white;
+	display: inline;
+    margin: 25px;
+}
+
+.content-middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px
+}
+
+.content-description {
+    margin-left: 50px;
+    padding: 25px;
+}
+
+.profile-box {
+    width: 215px;
+    height: 200px;
+    box-shadow: 1px 1px 12px black;
+    margin: 50px;
+    padding: 25px;
+    text-align: center;
+    
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+}
+
+.popular-articles-header {
+    text-align: center;
+}
+
+.popular-articles-box {
+    width: 215px;
+    height: 300px;
+    box-shadow: 1px 1px 12px black;
+    margin: 50px;
+    padding: 25px;
+    text-align: left;
+}
+
+.popular-articles-box li{
+	padding-left: 5px;
+}
