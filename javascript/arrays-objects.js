@@ -4,7 +4,7 @@
 // - an array of strings: 'apple', 'berry', 'cherry'
 // - the boolean value true
 function myArr() {
-  // Replace this with your code
+  return [4, 'abc', ['apple', 'berry', 'cherry'], true]
 }
 
 // The following array, `nestedLetters`, contains many levels of nested arrays.
@@ -12,7 +12,7 @@ function myArr() {
 function getZ() {
   const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a'];
 
-  // Replace this with your code
+  return nestedLetters[5][2][1]
 }
 
 // Use the spread operator to combine the following arrays into one array and return it.
@@ -22,7 +22,7 @@ function flatAnimals() {
   const savannah = ['lion', 'zebra', 'lion', 'giraffe'];
   const desert = ['rattlesnake', 'coyote'];
 
-  // Replace this with your code
+  return [...forest, ...ocean, ...savannah, ...desert]
 }
 
 // Now use the spread operator to return a copy of the animals array with 'elephant' at
@@ -30,7 +30,7 @@ function flatAnimals() {
 function animalsWithElephant() {
   const animals = ['aardvark', 'bear', 'cat'];
 
-  // Replace this with your code
+  return [...animals, 'elephant']
 }
 
 // You don't agree with the rating for Splendor,
@@ -45,7 +45,7 @@ function improveGameRating() {
     rating: 1,
   };
 
-  // Replace this with your code
+  delete gameInfo.rating;
 
   return gameInfo;
 }
@@ -63,7 +63,9 @@ function evenShapes() {
     octagon: 8,
   };
 
-  // Replace this with your code
+  for (let shape in shapes) {
+    shapes[shape] % 2 === 0 ? true : delete shapes[shape]
+   }
 
   return shapes;
 }
@@ -100,7 +102,16 @@ function betterCourses() {
     },
   ];
 
-  // Replace this with your code
+  for(let i = 0; i < courses.length; i++){
+    for(let course in courses[i]){
+      for(let key in course){
+        console.log('key', key)
+      }
+      // if(courses[course] === true){
+      //   courses[course] = false
+      // }
+    }
+  }
 
   return courses;
 }
@@ -113,7 +124,6 @@ function findPairs() {
   const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n'];
   const pairsArray = [];
 
-  // Replace this with your code
 
   return pairsArray;
 }
@@ -137,18 +147,19 @@ const shippingInfo = {
 // Using the Object.assign method, create a new object that combines the contactInfo and
 // shippingInfo objects and return it.
 function getHelensInfo() {
-  // Replace this with your code
+  return Object.assign(contactInfo, shippingInfo);
 }
 
 // Return Helen's email using destructuring.
 function getHelensEmail() {
-  // Replace this with your code
+    return contactInfo.email;
 }
 
 // Use destructuring to save the zip code and state
 // from shippingInfo to new variables and return [zipCode, state]
 function getZipAndState() {
-  // Replace this with your code
+  let info = {state, zipCode} = shippingInfo 
+  return [zipCode, state];
 }
 
 // Helen has a daughter named Ellen that lives at the same address.
@@ -210,19 +221,19 @@ const userInfo = {
 
 // Return the value of alerts in gn@rly_c0der_007's settings using dot notation.
 function shouldAlert() {
-  // Replace this with your code
+  return userInfo.settings.alerts
 }
 
 // Return the last item in gn@rly_c0der_007's topics array
 // using dot and/or bracket notation.
 function lastTopic() {
-  // Replace this with your code
+  return userInfo.topics[userInfo.topics.length - 1]
 }
 
 // Return the userId of the first response to
 // gn@rly_c0der_007's 2nd comment using dot/bracket notation.
 function firstResponseId() {
-  // Replace this with your code
+  return userInfo.comments[1].responses[0].userId
 }
 
 export {
